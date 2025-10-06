@@ -1,0 +1,200 @@
+/* === GENERAL STYLING === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === BODY === */
+body {
+  background-color: #f9fafc;
+  color: #333;
+}
+
+/* === NAVBAR === */
+.header {
+  background: #0066cc;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  span{
+    color:#ffcc00;
+  }
+}
+
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffcc00;
+}
+
+/* === HAMBURGER MENU === */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* === COURSE CONTAINER === */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* === COURSE CARD === */
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 1rem;
+}
+
+.course-info h3 {
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+.course-info p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.course-meta {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-price {
+  color: #009933;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.enroll-btn {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.enroll-btn:hover {
+  background: #0052a3;
+}
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  background: #f1f1f1;
+  padding: 1rem;
+  color: #444;
+  font-size: 0.9rem;
+
+   span{
+    color:#ffcc00;
+  }
+}
+
+/* === RESPONSIVE NAV === */
+@media (max-width: 768px) {
+ .navbar {
+    position: relative; /* ensures the dropdown menu is positioned below the navbar */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: rgb(245, 243, 243);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%; /* positions menu right below the navbar */
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(218, 216, 216, 0.2);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav a {
+    font-size: 2.5rem;
+    color: #0052a3;
+    padding: 0.8rem 0.8rem;
+    border-top: 1px solid #0252a1;
+  }
+
+  .nav a:first-child {
+    border-top: none;
+  }
+}
